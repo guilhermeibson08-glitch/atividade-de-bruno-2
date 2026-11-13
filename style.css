@@ -1,0 +1,220 @@
+
+/* ==============================
+   NEXUS HARDWARE - ESTILO GAMER
+============================== */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIÁVEIS */
+:root {
+    --azul: #1688ff;
+    --azul-escuro: #0759b5;
+    --fundo: #080d16;
+    --card: #111c2c;
+    --texto: #ffffff;
+    --cinza: #aab7c8;
+    --borda: #26364b;
+}
+
+/* PÁGINA */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* CABEÇALHO */
+header {
+    background: #0c1421;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 2px solid var(--azul);
+    box-shadow: 0 5px 20px #0008;
+
+     background-image: url(logo/logo.jpg);
+  background-repeat: no-repeat;
+  background-position: 24px center;
+  background-size: 140px auto;
+ 
+}
+
+header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header p {
+    color: var(--cinza);
+    margin-top: 8px;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* CATÁLOGO */
+.catalogo h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.catalogo h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    background: var(--azul);
+    margin: 12px auto;
+    border-radius: 10px;
+}
+
+/* GRADE DE PRODUTOS */
+#lista-produtos {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+/* CARD DOS PRODUTOS */
+.card {
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    padding: 18px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px #0004;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--azul);
+    box-shadow: 0 10px 30px #1688ff30;
+}
+
+/* IMAGENS */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* NOME DO PRODUTO */
+.card h3 {
+    margin: 16px 0 10px;
+    font-size: 17px;
+    color: white;
+}
+
+/* PREÇO */
+.preco {
+    color: var(--azul);
+    font-size: 23px;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+/* BOTÃO */
+.card button {
+    width: 100%;
+    padding: 13px 15px;
+    background: var(--azul);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.card button:hover {
+    background: var(--azul-escuro);
+    transform: scale(1.03);
+}
+
+.card button:active {
+    transform: scale(0.97);
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    background: #0c1421;
+    border-top: 1px solid var(--borda);
+    color: var(--cinza);
+    margin-top: 60px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+
+    header {
+        padding: 22px 12px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 12px;
+    }
+
+    .catalogo h2 {
+        font-size: 24px;
+    }
+
+    #lista-produtos {
+        grid-template-columns:
+            repeat(auto-fit, minmax(145px, 1fr));
+        gap: 12px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    .card img {
+        height: 130px;
+    }
+
+    .card h3 {
+        font-size: 14px;
+    }
+
+    .preco {
+        font-size: 19px;
+    }
+
+    .card button {
+        font-size: 12px;
+        padding: 11px 5px;
+    }
+}
